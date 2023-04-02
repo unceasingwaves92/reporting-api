@@ -1,0 +1,30 @@
+server:
+  port: 9091
+
+spring:
+  application:
+    name: reporting-service
+
+logging:
+  level:
+    org:
+      springframework: info
+    com:
+      bugtracking: debug
+      myspringboot:
+        kafka: debug
+  file:
+    name: C:/Users/Dell/IdeaProjects/reporting-api/reporting-api/reportingapi.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1090/eureka/
+
+
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+    spring-integration-kafka: test

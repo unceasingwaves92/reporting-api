@@ -1,0 +1,899 @@
+2023-03-12 11:53:37 - Starting ReportingApiApplication using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 12780 (C:\Users\Dell\IdeaProjects\reporting-api\reporting-api\build\classes\java\main started by Dell in C:\Users\Dell\IdeaProjects\Emexo)
+2023-03-12 11:53:37 - The following 1 profile is active: "sit"
+2023-03-12 11:53:42 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-03-12 11:53:43 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-03-12 11:53:43 - BeanFactory id=1a533594-58e9-316c-98b1-d43e12e27a49
+2023-03-12 11:53:43 - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$6ee2e13a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 11:53:44 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 11:53:44 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 11:53:44 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 11:53:46 - Tomcat initialized with port(s): 9091 (http)
+2023-03-12 11:53:46 - Starting service [Tomcat]
+2023-03-12 11:53:46 - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-12 11:53:46 - Initializing Spring embedded WebApplicationContext
+2023-03-12 11:53:46 - Root WebApplicationContext: initialization completed in 8396 ms
+2023-03-12 11:53:49 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40ce9049, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52ca2652, org.springframework.security.web.context.SecurityContextPersistenceFilter@19e21f89, org.springframework.security.web.header.HeaderWriterFilter@1b3ab4f9, org.springframework.security.web.authentication.logout.LogoutFilter@4bb1b96b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@dd3f8aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29079032, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@776015fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65c5bf0e, org.springframework.security.web.session.SessionManagementFilter@23c767e6, org.springframework.security.web.access.ExceptionTranslationFilter@36bed37a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1af4955e]
+2023-03-12 11:54:00 - Eureka HTTP Client uses RestTemplate.
+2023-03-12 11:54:00 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-12 11:54:00 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-12 11:54:01 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-03-12 11:54:01 - Channel 'reporting-service.errorChannel' has 1 subscriber(s).
+2023-03-12 11:54:01 - started bean '_org.springframework.integration.errorLogger'
+2023-03-12 11:54:01 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-03-12 11:54:01 - Channel 'reporting-service.consumingChannel' has 1 subscriber(s).
+2023-03-12 11:54:01 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-03-12 11:54:01 - Setting initial instance status as: STARTING
+2023-03-12 11:54:01 - Initializing Eureka in region us-east-1
+2023-03-12 11:54:01 - Resolving eureka endpoints via configuration
+2023-03-12 11:54:01 - Disable delta property : false
+2023-03-12 11:54:01 - Single vip registry refresh property : null
+2023-03-12 11:54:01 - Force full registry fetch : false
+2023-03-12 11:54:01 - Application is null : false
+2023-03-12 11:54:01 - Registered Applications size is zero : true
+2023-03-12 11:54:01 - Application version is -1: true
+2023-03-12 11:54:01 - Getting all instance registry info from the eureka server
+2023-03-12 11:54:02 - The response status is 200
+2023-03-12 11:54:02 - Starting heartbeat executor: renew interval is: 30
+2023-03-12 11:54:02 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-03-12 11:54:02 - Discovery Client initialized at timestamp 1678602242264 with initial instances count: 1
+2023-03-12 11:54:02 - Registering application REPORTING-SERVICE with eureka with status UP
+2023-03-12 11:54:02 - Saw local status change event StatusChangeEvent [timestamp=1678602242264, current=UP, previous=STARTING]
+2023-03-12 11:54:02 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091: registering service...
+2023-03-12 11:54:02 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-03-12 11:54:02 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091 - registration status: 204
+2023-03-12 11:54:03 - Kafka version: 3.1.2
+2023-03-12 11:54:03 - Kafka commitId: f8c67dc3ae0a3265
+2023-03-12 11:54:03 - Kafka startTimeMs: 1678602243250
+2023-03-12 11:54:03 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-03-12 11:54:03 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [reportingapi/configuration/ConsumingChannelConfiguration.class]'; from source: 'reportingapi.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-03-12 11:54:03 - Tomcat started on port(s): 9091 (http) with context path ''
+2023-03-12 11:54:03 - Updating port to 9091
+2023-03-12 11:54:05 - Started ReportingApiApplication in 29.823 seconds (JVM running for 31.148)
+2023-03-12 11:54:05 - Reporting application has been started
+2023-03-12 11:54:06 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:06 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:06 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:18 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:18 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:18 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:21 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:21 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:21 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:24 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:27 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:27 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:27 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:30 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:30 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:30 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:33 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:33 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:33 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:36 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:36 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:36 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:42 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:42 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:42 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:45 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:45 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:45 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:48 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:51 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:51 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:51 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:54 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:54 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:54 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:54:57 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:54:57 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:54:57 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:01 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:01 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:01 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:03 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:03 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:03 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:07 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:07 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:07 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:10 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:13 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:16 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:16 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:16 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:19 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:19 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:19 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:22 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:22 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:22 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:25 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:25 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:25 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:31 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:31 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:31 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:34 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:34 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:34 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:38 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:41 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:41 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:41 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 11:55:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 11:55:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-12 11:55:44 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-12 19:00:45 - Starting ReportingApiApplication using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 7788 (C:\Users\Dell\IdeaProjects\reporting-api\reporting-api\build\classes\java\main started by Dell in C:\Users\Dell\IdeaProjects\Emexo)
+2023-03-12 19:00:45 - The following 1 profile is active: "sit"
+2023-03-12 19:00:51 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-03-12 19:00:51 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-03-12 19:00:52 - BeanFactory id=1a533594-58e9-316c-98b1-d43e12e27a49
+2023-03-12 19:00:52 - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$68ddf5ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:00:52 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:00:52 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:00:52 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:00:56 - Tomcat initialized with port(s): 9091 (http)
+2023-03-12 19:00:56 - Starting service [Tomcat]
+2023-03-12 19:00:56 - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-12 19:00:57 - Initializing Spring embedded WebApplicationContext
+2023-03-12 19:00:57 - Root WebApplicationContext: initialization completed in 10933 ms
+2023-03-12 19:00:59 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2eda4eeb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ba90d8a, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c8fe7a4, org.springframework.security.web.header.HeaderWriterFilter@50b93353, org.springframework.security.web.authentication.logout.LogoutFilter@776015fc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d0100ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ad99cf3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c90b7b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@309dcdf3, org.springframework.security.web.session.SessionManagementFilter@8f40022, org.springframework.security.web.access.ExceptionTranslationFilter@62a54948, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22da2fe6]
+2023-03-12 19:01:09 - Eureka HTTP Client uses RestTemplate.
+2023-03-12 19:01:09 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-12 19:01:09 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-12 19:01:10 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-03-12 19:01:10 - Channel 'reporting-service.errorChannel' has 1 subscriber(s).
+2023-03-12 19:01:10 - started bean '_org.springframework.integration.errorLogger'
+2023-03-12 19:01:10 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-03-12 19:01:10 - Channel 'reporting-service.consumingChannel' has 1 subscriber(s).
+2023-03-12 19:01:10 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-03-12 19:01:10 - Setting initial instance status as: STARTING
+2023-03-12 19:01:10 - Initializing Eureka in region us-east-1
+2023-03-12 19:01:10 - Resolving eureka endpoints via configuration
+2023-03-12 19:01:10 - Disable delta property : false
+2023-03-12 19:01:10 - Single vip registry refresh property : null
+2023-03-12 19:01:10 - Force full registry fetch : false
+2023-03-12 19:01:10 - Application is null : false
+2023-03-12 19:01:10 - Registered Applications size is zero : true
+2023-03-12 19:01:10 - Application version is -1: true
+2023-03-12 19:01:10 - Getting all instance registry info from the eureka server
+2023-03-12 19:01:11 - The response status is 200
+2023-03-12 19:01:11 - Starting heartbeat executor: renew interval is: 30
+2023-03-12 19:01:11 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-03-12 19:01:11 - Discovery Client initialized at timestamp 1678627871361 with initial instances count: 1
+2023-03-12 19:01:11 - Registering application REPORTING-SERVICE with eureka with status UP
+2023-03-12 19:01:11 - Saw local status change event StatusChangeEvent [timestamp=1678627871371, current=UP, previous=STARTING]
+2023-03-12 19:01:11 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091: registering service...
+2023-03-12 19:01:11 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091 - registration status: 204
+2023-03-12 19:01:11 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-03-12 19:01:12 - Kafka version: 3.1.2
+2023-03-12 19:01:12 - Kafka commitId: f8c67dc3ae0a3265
+2023-03-12 19:01:12 - Kafka startTimeMs: 1678627872593
+2023-03-12 19:01:12 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-03-12 19:01:12 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [reportingapi/configuration/ConsumingChannelConfiguration.class]'; from source: 'reportingapi.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-03-12 19:01:12 - Tomcat started on port(s): 9091 (http) with context path ''
+2023-03-12 19:01:12 - Updating port to 9091
+2023-03-12 19:01:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 2 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: fcFPxzuYT1OX3C_L-HxhDg
+2023-03-12 19:01:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 4 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 5 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:15 - Started ReportingApiApplication in 33.412 seconds (JVM running for 35.922)
+2023-03-12 19:01:15 - Reporting application has been started
+2023-03-12 19:01:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 7 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:16 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 9 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:16 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 11 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:16 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 13 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 15 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 17 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 19 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 21 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 23 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 25 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 27 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Error while fetching metadata with correlation id 29 : {test=LEADER_NOT_AVAILABLE}
+2023-03-12 19:01:17 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to 3AkQoo6LT8-MaEy1EHwprQ
+2023-03-12 19:01:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-03-12 19:01:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:01:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-03-12 19:01:28 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=1, memberId='consumer-spring-integration-1-fb21b6dc-3a93-44e3-bffc-32dc43f5d4af', protocol='range'}
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Finished assignment for group at generation 1: {consumer-spring-integration-1-fb21b6dc-3a93-44e3-bffc-32dc43f5d4af=Assignment(partitions=[test-0])}
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=1, memberId='consumer-spring-integration-1-fb21b6dc-3a93-44e3-bffc-32dc43f5d4af', protocol='range'}
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Found no committed offset for partition test-0
+2023-03-12 19:01:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting offset for partition test-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}.
+2023-03-12 19:01:29 - spring-integration: partitions assigned: [test-0]
+2023-03-12 19:06:10 - Resolving eureka endpoints via configuration
+2023-03-12 19:10:00 - Starting ReportingApiApplication using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 6320 (C:\Users\Dell\IdeaProjects\reporting-api\reporting-api\build\classes\java\main started by Dell in C:\Users\Dell\IdeaProjects\Emexo)
+2023-03-12 19:10:00 - The following 1 profile is active: "sit"
+2023-03-12 19:10:05 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-03-12 19:10:05 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-03-12 19:10:06 - BeanFactory id=1a533594-58e9-316c-98b1-d43e12e27a49
+2023-03-12 19:10:06 - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$cd6c518c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:10:06 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:10:06 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:10:06 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:10:09 - Tomcat initialized with port(s): 9091 (http)
+2023-03-12 19:10:09 - Starting service [Tomcat]
+2023-03-12 19:10:09 - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-12 19:10:09 - Initializing Spring embedded WebApplicationContext
+2023-03-12 19:10:09 - Root WebApplicationContext: initialization completed in 8720 ms
+2023-03-12 19:10:12 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5707f613, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77b3752b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6048e26a, org.springframework.security.web.header.HeaderWriterFilter@42ea7565, org.springframework.security.web.authentication.logout.LogoutFilter@552cede7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@713a35c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44286963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b736fee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6367a688, org.springframework.security.web.session.SessionManagementFilter@422ad5e2, org.springframework.security.web.access.ExceptionTranslationFilter@2c26ba07, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7069f076]
+2023-03-12 19:10:22 - Eureka HTTP Client uses RestTemplate.
+2023-03-12 19:10:22 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-12 19:10:22 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-12 19:10:23 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-03-12 19:10:23 - Channel 'reporting-service.errorChannel' has 1 subscriber(s).
+2023-03-12 19:10:23 - started bean '_org.springframework.integration.errorLogger'
+2023-03-12 19:10:23 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-03-12 19:10:23 - Channel 'reporting-service.consumingChannel' has 1 subscriber(s).
+2023-03-12 19:10:23 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-03-12 19:10:23 - Setting initial instance status as: STARTING
+2023-03-12 19:10:23 - Initializing Eureka in region us-east-1
+2023-03-12 19:10:23 - Resolving eureka endpoints via configuration
+2023-03-12 19:10:23 - Disable delta property : false
+2023-03-12 19:10:23 - Single vip registry refresh property : null
+2023-03-12 19:10:23 - Force full registry fetch : false
+2023-03-12 19:10:23 - Application is null : false
+2023-03-12 19:10:23 - Registered Applications size is zero : true
+2023-03-12 19:10:23 - Application version is -1: true
+2023-03-12 19:10:23 - Getting all instance registry info from the eureka server
+2023-03-12 19:10:24 - The response status is 200
+2023-03-12 19:10:24 - Starting heartbeat executor: renew interval is: 30
+2023-03-12 19:10:24 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-03-12 19:10:24 - Discovery Client initialized at timestamp 1678628424914 with initial instances count: 2
+2023-03-12 19:10:24 - Registering application REPORTING-SERVICE with eureka with status UP
+2023-03-12 19:10:24 - Saw local status change event StatusChangeEvent [timestamp=1678628424927, current=UP, previous=STARTING]
+2023-03-12 19:10:24 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091: registering service...
+2023-03-12 19:10:25 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091 - registration status: 204
+2023-03-12 19:10:25 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-03-12 19:10:26 - Kafka version: 3.1.2
+2023-03-12 19:10:26 - Kafka commitId: f8c67dc3ae0a3265
+2023-03-12 19:10:26 - Kafka startTimeMs: 1678628426470
+2023-03-12 19:10:26 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-03-12 19:10:26 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [reportingapi/configuration/ConsumingChannelConfiguration.class]'; from source: 'reportingapi.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-03-12 19:10:26 - Tomcat started on port(s): 9091 (http) with context path ''
+2023-03-12 19:10:26 - Updating port to 9091
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to 3AkQoo6LT8-MaEy1EHwprQ
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: fcFPxzuYT1OX3C_L-HxhDg
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=3, memberId='consumer-spring-integration-1-5282b97b-211b-4494-94b0-56b8dbe28930', protocol='range'}
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Finished assignment for group at generation 3: {consumer-spring-integration-1-5282b97b-211b-4494-94b0-56b8dbe28930=Assignment(partitions=[test-0])}
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=3, memberId='consumer-spring-integration-1-5282b97b-211b-4494-94b0-56b8dbe28930', protocol='range'}
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Found no committed offset for partition test-0
+2023-03-12 19:10:29 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting offset for partition test-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}.
+2023-03-12 19:10:29 - spring-integration: partitions assigned: [test-0]
+2023-03-12 19:10:30 - Started ReportingApiApplication in 32.079 seconds (JVM running for 33.489)
+2023-03-12 19:10:30 - Reporting application has been started
+2023-03-12 19:13:36 - Starting ReportingApiApplication using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 3136 (C:\Users\Dell\IdeaProjects\reporting-api\reporting-api\build\classes\java\main started by Dell in C:\Users\Dell\IdeaProjects\Emexo)
+2023-03-12 19:13:36 - The following 1 profile is active: "sit"
+2023-03-12 19:13:41 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-03-12 19:13:41 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-03-12 19:13:42 - BeanFactory id=1a533594-58e9-316c-98b1-d43e12e27a49
+2023-03-12 19:13:42 - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$68ddf5ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:13:43 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:13:43 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:13:43 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:13:47 - Tomcat initialized with port(s): 9091 (http)
+2023-03-12 19:13:47 - Starting service [Tomcat]
+2023-03-12 19:13:47 - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-12 19:13:50 - Initializing Spring embedded WebApplicationContext
+2023-03-12 19:13:50 - Root WebApplicationContext: initialization completed in 13848 ms
+2023-03-12 19:13:53 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@22da2fe6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@100ad67e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c719bd4, org.springframework.security.web.header.HeaderWriterFilter@5382184b, org.springframework.security.web.authentication.logout.LogoutFilter@36bed37a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@519c6fcc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37a0ec3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62a54948, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@713a35c5, org.springframework.security.web.session.SessionManagementFilter@202898d7, org.springframework.security.web.access.ExceptionTranslationFilter@4262fdeb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f66d8e1]
+2023-03-12 19:14:04 - Eureka HTTP Client uses RestTemplate.
+2023-03-12 19:14:04 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-12 19:14:04 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-12 19:14:05 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-03-12 19:14:05 - Channel 'reporting-service.errorChannel' has 1 subscriber(s).
+2023-03-12 19:14:05 - started bean '_org.springframework.integration.errorLogger'
+2023-03-12 19:14:05 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-03-12 19:14:05 - Channel 'reporting-service.consumingChannel' has 1 subscriber(s).
+2023-03-12 19:14:05 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-03-12 19:14:05 - Setting initial instance status as: STARTING
+2023-03-12 19:14:05 - Initializing Eureka in region us-east-1
+2023-03-12 19:14:05 - Resolving eureka endpoints via configuration
+2023-03-12 19:14:05 - Disable delta property : false
+2023-03-12 19:14:05 - Single vip registry refresh property : null
+2023-03-12 19:14:05 - Force full registry fetch : false
+2023-03-12 19:14:05 - Application is null : false
+2023-03-12 19:14:05 - Registered Applications size is zero : true
+2023-03-12 19:14:05 - Application version is -1: true
+2023-03-12 19:14:05 - Getting all instance registry info from the eureka server
+2023-03-12 19:14:06 - The response status is 200
+2023-03-12 19:14:06 - Starting heartbeat executor: renew interval is: 30
+2023-03-12 19:14:06 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-03-12 19:14:06 - Discovery Client initialized at timestamp 1678628646580 with initial instances count: 2
+2023-03-12 19:14:06 - Registering application REPORTING-SERVICE with eureka with status UP
+2023-03-12 19:14:06 - Saw local status change event StatusChangeEvent [timestamp=1678628646623, current=UP, previous=STARTING]
+2023-03-12 19:14:06 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091: registering service...
+2023-03-12 19:14:06 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091 - registration status: 204
+2023-03-12 19:14:07 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-03-12 19:14:08 - Kafka version: 3.1.2
+2023-03-12 19:14:08 - Kafka commitId: f8c67dc3ae0a3265
+2023-03-12 19:14:08 - Kafka startTimeMs: 1678628648611
+2023-03-12 19:14:08 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-03-12 19:14:08 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [reportingapi/configuration/ConsumingChannelConfiguration.class]'; from source: 'reportingapi.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-03-12 19:14:08 - Tomcat started on port(s): 9091 (http) with context path ''
+2023-03-12 19:14:08 - Updating port to 9091
+2023-03-12 19:14:10 - Started ReportingApiApplication in 38.544 seconds (JVM running for 43.876)
+2023-03-12 19:14:10 - Reporting application has been started
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to 3AkQoo6LT8-MaEy1EHwprQ
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: fcFPxzuYT1OX3C_L-HxhDg
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=5, memberId='consumer-spring-integration-1-1d9c8669-a4f0-447c-8c29-fad776a74a0d', protocol='range'}
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Finished assignment for group at generation 5: {consumer-spring-integration-1-1d9c8669-a4f0-447c-8c29-fad776a74a0d=Assignment(partitions=[test-0])}
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=5, memberId='consumer-spring-integration-1-1d9c8669-a4f0-447c-8c29-fad776a74a0d', protocol='range'}
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Found no committed offset for partition test-0
+2023-03-12 19:14:14 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting offset for partition test-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}.
+2023-03-12 19:14:14 - spring-integration: partitions assigned: [test-0]
+2023-03-12 19:19:05 - Resolving eureka endpoints via configuration
+2023-03-12 19:23:15 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
+2023-03-12 19:24:05 - Resolving eureka endpoints via configuration
+2023-03-12 19:47:31 - Starting ReportingApiApplication using Java 1.8.0_144 on DESKTOP-3TVHP8S with PID 7184 (C:\Users\Dell\IdeaProjects\reporting-api\reporting-api\build\classes\java\main started by Dell in C:\Users\Dell\IdeaProjects\Emexo)
+2023-03-12 19:47:31 - The following 1 profile is active: "sit"
+2023-03-12 19:47:40 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-03-12 19:47:40 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-03-12 19:47:42 - BeanFactory id=1a533594-58e9-316c-98b1-d43e12e27a49
+2023-03-12 19:47:46 - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$68ddf5ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:47:47 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:47:47 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:47:47 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-03-12 19:47:55 - Tomcat initialized with port(s): 9091 (http)
+2023-03-12 19:47:56 - Starting service [Tomcat]
+2023-03-12 19:47:56 - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-12 19:48:01 - Initializing Spring embedded WebApplicationContext
+2023-03-12 19:48:01 - Root WebApplicationContext: initialization completed in 29773 ms
+2023-03-12 19:48:10 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9a20cbd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1af4955e, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c90b7b7, org.springframework.security.web.header.HeaderWriterFilter@3249e278, org.springframework.security.web.authentication.logout.LogoutFilter@59c500f7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5ba90d8a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ba1308d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@235c997d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@445821a6, org.springframework.security.web.session.SessionManagementFilter@2ad99cf3, org.springframework.security.web.access.ExceptionTranslationFilter@c8f97a7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11787b64]
+2023-03-12 19:48:27 - Eureka HTTP Client uses RestTemplate.
+2023-03-12 19:48:28 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-03-12 19:48:28 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-12 19:48:29 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-03-12 19:48:29 - Channel 'reporting-service.errorChannel' has 1 subscriber(s).
+2023-03-12 19:48:29 - started bean '_org.springframework.integration.errorLogger'
+2023-03-12 19:48:29 - Adding {message-handler:consumingChannelConfiguration.countDownLatchHandler.serviceActivator} as a subscriber to the 'consumingChannel' channel
+2023-03-12 19:48:29 - Channel 'reporting-service.consumingChannel' has 1 subscriber(s).
+2023-03-12 19:48:29 - started bean 'consumingChannelConfiguration.countDownLatchHandler.serviceActivator'
+2023-03-12 19:48:29 - Setting initial instance status as: STARTING
+2023-03-12 19:48:30 - Initializing Eureka in region us-east-1
+2023-03-12 19:48:30 - Resolving eureka endpoints via configuration
+2023-03-12 19:48:31 - Disable delta property : false
+2023-03-12 19:48:31 - Single vip registry refresh property : null
+2023-03-12 19:48:31 - Force full registry fetch : false
+2023-03-12 19:48:31 - Application is null : false
+2023-03-12 19:48:31 - Registered Applications size is zero : true
+2023-03-12 19:48:31 - Application version is -1: true
+2023-03-12 19:48:31 - Getting all instance registry info from the eureka server
+2023-03-12 19:48:32 - The response status is 200
+2023-03-12 19:48:32 - Starting heartbeat executor: renew interval is: 30
+2023-03-12 19:48:32 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-03-12 19:48:32 - Discovery Client initialized at timestamp 1678630712869 with initial instances count: 2
+2023-03-12 19:48:32 - Registering application REPORTING-SERVICE with eureka with status UP
+2023-03-12 19:48:32 - Saw local status change event StatusChangeEvent [timestamp=1678630712907, current=UP, previous=STARTING]
+2023-03-12 19:48:32 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091: registering service...
+2023-03-12 19:48:33 - DiscoveryClient_REPORTING-SERVICE/DESKTOP-3TVHP8S:reporting-service:9091 - registration status: 204
+2023-03-12 19:48:33 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spring-integration-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spring-integration
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-03-12 19:48:35 - Kafka version: 3.1.2
+2023-03-12 19:48:35 - Kafka commitId: f8c67dc3ae0a3265
+2023-03-12 19:48:35 - Kafka startTimeMs: 1678630715308
+2023-03-12 19:48:35 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Subscribed to topic(s): test
+2023-03-12 19:48:35 - started bean 'kafkaMessageDrivenChannelAdapter'; defined in: 'class path resource [reportingapi/configuration/ConsumingChannelConfiguration.class]'; from source: 'reportingapi.configuration.ConsumingChannelConfiguration.kafkaMessageDrivenChannelAdapter()'
+2023-03-12 19:48:35 - Tomcat started on port(s): 9091 (http) with context path ''
+2023-03-12 19:48:35 - Updating port to 9091
+2023-03-12 19:48:38 - Started ReportingApiApplication in 77.698 seconds (JVM running for 102.533)
+2023-03-12 19:48:38 - Reporting application has been started
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting the last seen epoch of partition test-0 to 0 since the associated topicId changed from null to 3AkQoo6LT8-MaEy1EHwprQ
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Cluster ID: fcFPxzuYT1OX3C_L-HxhDg
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Discovered group coordinator DESKTOP-3TVHP8S:9092 (id: 2147483647 rack: null)
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Request joining group due to: need to re-join with the given member-id
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] (Re-)joining group
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully joined group with generation Generation{generationId=1, memberId='consumer-spring-integration-1-e9666129-d34b-4cfa-9ef7-0b1863490370', protocol='range'}
+2023-03-12 19:48:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Finished assignment for group at generation 1: {consumer-spring-integration-1-e9666129-d34b-4cfa-9ef7-0b1863490370=Assignment(partitions=[test-0])}
+2023-03-12 19:48:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Successfully synced group in generation Generation{generationId=1, memberId='consumer-spring-integration-1-e9666129-d34b-4cfa-9ef7-0b1863490370', protocol='range'}
+2023-03-12 19:48:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Notifying assignor about the new Assignment(partitions=[test-0])
+2023-03-12 19:48:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Adding newly assigned partitions: test-0
+2023-03-12 19:48:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Found no committed offset for partition test-0
+2023-03-12 19:48:40 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Resetting offset for partition test-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-3TVHP8S:9092 (id: 0 rack: null)], epoch=0}}.
+2023-03-12 19:48:40 - spring-integration: partitions assigned: [test-0]
+2023-03-12 19:53:31 - Resolving eureka endpoints via configuration
+2023-03-12 19:57:39 - [Consumer clientId=consumer-spring-integration-1, groupId=spring-integration] Node -1 disconnected.
